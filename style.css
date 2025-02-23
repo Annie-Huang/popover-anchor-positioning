@@ -57,6 +57,13 @@
 .profile-menu:popover-open {
   display: grid;
   opacity: 1;
+
+  /* Add the starting style for the popover before it change to the final style
+     This need to be added at the end, if you add it on top of opacity: 1, it will not work.
+  */
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 /* You will need to make it the window in the right position to trigger the switch to the position-try-fallbacks */
