@@ -3,6 +3,9 @@ CSS Popover + Anchor Positioning is Magical (https://www.youtube.com/watch?v=DNX
 https://codepen.io/kevinpowell/pen/poMaLjR
 https://github.com/Annie-Huang/popover-anchor-positioning
 
+https://caniuse.com/?search=anchor
+https://github.com/oddbird/popover-polyfill
+https://github.com/oddbird/css-anchor-positioning
 ---------------------------------------------------------------------------
 
 How to add a popper:

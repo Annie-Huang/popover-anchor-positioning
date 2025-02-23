@@ -9,6 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- https://github.com/oddbird/css-anchor-positioning
+         current support:
+            Firefox 54+ (includes Android)
+            Chrome 51 - 124 (includes Android)
+            Edge 79 - 124
+            Safari 10+ (includes iOS)
+    -->
+    <script type="module">
+      if (!('anchorName' in document.documentElement.style)) {
+        import('https://unpkg.com/@oddbird/css-anchor-positioning');
+      }
+    </script>
   </head>
   <body>
     <nav class="primary-nav">
