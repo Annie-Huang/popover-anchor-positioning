@@ -25,9 +25,10 @@
 
   /* Make connection of anchor to popover */
   position-anchor: --profile-button;
-  top: anchor(
-    bottom
-  ); /* we want to place the top of popover to the bottom of the anchor and add margin to it. */
+  /* we want to place the top of popover to the bottom of the anchor and add margin to it.
+     https://caniuse.com/?search=anchor
+  */
+  top: anchor(bottom);
   right: anchor(right);
   margin-block-start: 6px;
 
@@ -37,6 +38,10 @@
   background: var(--clr-surface-2);
   color: var(--clr-text-1);
   font-size: 0.5rem;
+
+  & > * {
+    padding: 0.5rem;
+  }
 }
 
 .profile-menu:popover-open {
@@ -198,5 +203,10 @@
     width: 75px;
     aspect-ratio: 1;
     object-fit: cover;
+  }
+
+  .profile {
+    display: grid;
+    gap: 0.25rem;
   }
 }
