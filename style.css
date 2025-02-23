@@ -23,6 +23,11 @@
 
 .profile-menu:popover-open {
   display: grid;
+
+  /* User agent style is inset: 0px;  margin: auto; change it so the popover shift to the top left corner */
+  position: absolute; /* so it does not fixed position when I scroll */
+  margin: 0;
+  inset: auto;
 }
 
 @layer general-styling {
