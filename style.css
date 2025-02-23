@@ -16,6 +16,13 @@
 .profile-menu {
   /* popover default style has display: none  <-- popover close status */
 
+  /* User agent style is inset: 0px;  margin: auto; change it so the popover shift to the top left corner
+     Even though this is the popover style, keep it here since we always want it and only want to shift display value when it's opne or close.
+  */
+  position: absolute; /* so it does not fixed position when I scroll */
+  margin: 0;
+  inset: auto;
+
   border: 0;
   padding: 0;
   border-radius: var(--border-radius);
@@ -29,11 +36,6 @@
 
 .profile-menu:popover-open {
   display: grid;
-
-  /* User agent style is inset: 0px;  margin: auto; change it so the popover shift to the top left corner */
-  position: absolute; /* so it does not fixed position when I scroll */
-  margin: 0;
-  inset: auto;
 }
 
 @layer general-styling {
