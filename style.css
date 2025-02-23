@@ -1,3 +1,17 @@
+/* top code here more related to the animation
+   a bit lower down is the anchor positioning
+   and then general styling */
+
+/* Getting the menu in the right spot
+   with anchor positioning */
+.user-button {
+  padding: 0;
+  border-radius: 100vw;
+  aspect-ratio: 1;
+
+  anchor-name: --profile-button;
+}
+
 @layer general-styling {
   :root {
     --clr-surface-1: hsl(240, 29%, 8%);
@@ -116,5 +130,42 @@
 
   html {
     font-size: 2rem;
+  }
+
+  nav {
+    max-inline-size: 900px;
+    margin: var(--size-900) auto;
+    background-color: var(--clr-surface-3);
+    border-radius: 1rem;
+    margin: 3rem;
+    padding: 1rem 2rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    padding-inline: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-button {
+    border: 6px solid var(--clr-surface-3);
+    &:hover,
+    &:focus-visible {
+      outline: 0;
+      border-color: hsl(from var(--clr-surface-2) h s 45%);
+    }
+  }
+
+  .profile-image {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    width: 75px;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 }
