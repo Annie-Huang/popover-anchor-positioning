@@ -11,15 +11,18 @@
 }
 
 .profile-menu {
-  /*display: grid;*/
+  /* popover default style has display: none  <-- popover close status */
 
   border: 0;
   padding: 0;
   border-radius: var(--border-radius);
-
   background: var(--clr-surface-2);
   color: var(--clr-text-1);
   font-size: 0.5rem;
+}
+
+.profile-menu:popover-open {
+  display: grid;
 }
 
 @layer general-styling {
