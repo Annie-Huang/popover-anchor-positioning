@@ -29,7 +29,7 @@
      https://caniuse.com/?search=anchor
   */
   top: anchor(bottom);
-  right: anchor(right);
+  left: anchor(right);
   margin-block-start: 6px;
 
   border: 0;
