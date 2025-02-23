@@ -4,3 +4,7 @@ https://codepen.io/kevinpowell/pen/poMaLjR
 https://github.com/Annie-Huang/popover-anchor-positioning
 
 ---------------------------------------------------------------------------
+
+How to add a popper:
+          <button popovertarget="profile-menu" class="user-button">...</button>
+          <div popover id="profile-menu" class="profile-menu"></div>
