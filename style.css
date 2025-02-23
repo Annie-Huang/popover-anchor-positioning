@@ -25,6 +25,9 @@
 
   /* Make connection of anchor to popover */
   position-anchor: --profile-button;
+  /* Add fallback solution */
+  position-try-fallbacks: --bottom;
+
   /* we want to place the top of popover to the bottom of the anchor and add margin to it.
      https://caniuse.com/?search=anchor
   */
@@ -46,6 +49,18 @@
 
 .profile-menu:popover-open {
   display: grid;
+}
+
+/* You will need to make it the window in the right position to trigger the switch to the position-try-fallbacks */
+.primary-nav {
+  margin-left: 200px;
+}
+
+/* Fall back solution definition */
+@position-try --bottom {
+  inset: unset;
+  top: anchor(bottom);
+  right: anchor(right);
 }
 
 @layer general-styling {
