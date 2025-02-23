@@ -23,15 +23,17 @@
   margin: 0;
   inset: auto;
 
+  /* Make connection of anchor to popover */
+  position-anchor: --profile-button;
+  top: anchor(top);
+  right: anchor(right);
+
   border: 0;
   padding: 0;
   border-radius: var(--border-radius);
   background: var(--clr-surface-2);
   color: var(--clr-text-1);
   font-size: 0.5rem;
-
-  /* Make connection of anchor to popover */
-  position-anchor: --profile-button;
 }
 
 .profile-menu:popover-open {
