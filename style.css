@@ -1,0 +1,120 @@
+@layer general-styling {
+  :root {
+    --clr-surface-1: hsl(240, 29%, 8%);
+    --clr-surface-2: hsl(240, 29%, 12%);
+    --clr-surface-3: hsl(240, 29%, 16%);
+    /* BUTTONS */
+    --btn-border-radius: 0.25rem;
+
+    --btn-default-surface: var(--clr-surface-2);
+    --btn-default-text: var(--clr-text-2);
+    --btn-default-surface-hover: var(--clr-surface-3);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--clr-surface-1);
+    color: white;
+    min-height: 100dvh;
+
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin-block-end: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin-block-start: 2rem;
+  }
+
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  :is(button, .button) {
+    display: inline-flex;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    background-color: var(--btn-surface, var(--btn-default-surface));
+    color: white;
+    border: 0;
+    border-radius: 1rem;
+    transition: scale 0.125s;
+  }
+
+  :is(button, .button):is(:hover, :focus-visible) {
+    background-color: var(
+      --btn-surface-hover,
+      var(--btn-default-surface-hover)
+    );
+  }
+
+  :is(button, .button):active {
+    scale: 0.95;
+  }
+
+  html {
+    font-size: 2rem;
+  }
+}
